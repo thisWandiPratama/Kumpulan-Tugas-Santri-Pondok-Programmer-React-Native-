@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Lembar Jawaban</title>
+    <script>
+        function ctk(a) {
+            document.write(a)
+        }
+
+        function jil(a) {
+            return (a * 2 - 1)
+        }
+
+        function nap(a) {
+            return (a * 2 - 2)
+        }
+
+        function nap6(a) {
+            return ((9 - a) * 2)
+        }
+
+        function br() {
+            document.write("<br>")
+        }
+    </script>
+
+</head>
+<style>
+    body {
+        background-color: #d4080b;
+        background-image: url("https://www.blogteraktual.com/wp-content/uploads/2018/06/gambar-yang-cocok-untuk-wallpaper-laptop-inilah-kumpulan-desain-background-keren-cocok-untuk-slide-of-gambar-yang-cocok-untuk-wallpaper-laptop.jpg");
+        background-attachment: fixed;
+        background-size: cover;
+        color: black;
+    }
+</style>
+
+
+
+<body style="text-align: center;">
+</body>
+<script>
+    document.write('Nama = Wandi Pratma<br>')
+    document.write('Asal = Prabumulih<br>')
+    document.write('Hoby = Menulis<br>')
+    document.write('Cita - cita = Pengusaha<br>')
+    document.write('<br>============================================================================<br>')
+    document.write('<br>---------------------------------------<br>')
+    document.write('Jawaban Soal Nomor 1')
+    document.write('<br>---------------------------------------<br>')
+        //Tulis Jawaban Soal Nomor 1 Disini
+
+
+    function soal1(n) {
+        for (y = 1; y <= n; y++) {
+            for (x = 1; x <= n; x++) {
+                if (n - y <= x) ctk((n - y) * 2)
+                else ctk("_")
+            }
+            document.write("<br>")
+        }
+    }
+    soal1(30)
+    document.write("<br>")
+    document.write('<br>---------------------------------------<br>')
+    document.write('Jawaban Soal Nomor 2')
+    document.write('<br>---------------------------------------<br>')
+        //Tulis Jawaban Soal Nomor 2 Disini
+    function fib(a) {
+        if (a <= 2) {
+            return a
+        } else {
+            return fib(a - 1) + fib(a - 2)
+        }
+    }
+    ctk(120, 36)
+    br()
+    br()
+
+    function soal2(n) {
+        for (y = -n; y <= n; y++) {
+            for (x = -n; x <= n; x++) {
+                var xa = Math.abs(x)
+                var ya = Math.abs(y)
+                var hasil = xa > ya ? xa : ya
+                ctk(fib((n + 1) - hasil))
+            }
+            br()
+        }
+    }
+    soal2(8)
+    document.write('<br>---------------------------------------<br>')
+    document.write('Jawaban Soal Nomor 3')
+    document.write('<br>---------------------------------------<br>')
+        //Tulis Jawaban Soal Nomor 3 Disini
+
+    function pb(a) {
+        return (a - 1)
+    }
+
+    function soal3(n) {
+        for (y = 1; y <= n; y++) {
+            for (x = 1; x <= n - y; x++) {
+                document.write("_")
+            }
+
+            for (x = 1; x <= jil(y); x++) {
+                document.write(x)
+            }
+            br()
+        }
+    }
+    soal3(20)
+    document.write('<br>---------------------------------------<br>')
+    document.write('Jawaban Soal Nomor 4')
+    document.write('<br>---------------------------------------<br>')
+        //Tulis Jawaban Soal Nomor 4 Disini
+
+    function soal4(n) {
+        for (y = 1; y < n; y++) {
+            for (x = 1; x < n; x++) {
+                if (n - y == x) ctk((n - y) * 2)
+                else if (y == n / 2) ctk(jil(x))
+                else if (n - y >= x && y >= n / 2) ctk("*")
+                else if (n - y <= x && y <= n / 2) ctk("*")
+                else ctk("_")
+            }
+            br()
+        }
+    }
+    soal4(20)
+    document.write('<br>---------------------------------------<br>')
+    document.write('Jawaban Soal Nomor 5')
+    document.write('<br>---------------------------------------<br>')
+        //Tulis Jawaban Soal Nomor 5 Disini
+    function soal5(n) {
+        for (y = 1; y < n; y++) {
+            for (x = 1; x < n; x++) {
+                if (x == n / 2) ctk(jil(y))
+                else if (y == n / 2) ctk(fib(x))
+            }
+            br()
+        }
+    }
+    soal5(10)
+    document.write('<br>============================================================================<br>')
+</script>
+
+</html>
